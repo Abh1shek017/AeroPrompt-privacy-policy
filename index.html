@@ -214,15 +214,15 @@
         <div class="highlight-box">
             <h3>Guest Users</h3>
             <p><strong>Zero Persistence Policy:</strong> For users who are not logged in or are on the Guest tier, we do
-                not store your chat history or input prompts on our servers. Your data is processed via API to generate 
-                a response and is immediately discarded by AeroPrompt after the session ends.</p>
+                not store your chat history or input prompts on our servers. Your data is transiently processed via 
+                encrypted API calls to generate a response and is immediately discarded by AeroPrompt.</p>
         </div>
 
         <div class="highlight-box">
             <h3>Free & Pro Users</h3>
-            <p><strong>Contextual Continuity:</strong> To enable advanced features like "Context Awareness" and
-                "Personalization", we securely store a limited history (approximately the last 5-10 interactions) of
-                your conversations. This data is used solely to provide continuity for your active sessions.</p>
+            <p><strong>Contextual Continuity:</strong> To enable features like "Context Awareness," we securely store a 
+                limited history (approximately the last 5-10 interactions) of your conversations. This allows AeroPrompt 
+                to maintain context during your session.</p>
             <p><strong>Control & Deletion:</strong> You retain full control over this data. You may clear your
                 conversation history at any time directly through the extension's settings menu.</p>
         </div>
@@ -234,13 +234,15 @@
                 <line x1="12" y1="16" x2="12" y2="12"></line>
                 <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
-            2. AI Models & Third-Party Processing
+            2. AI Infrastructure & Third-Party Routing
         </h2>
-        <p>AeroPrompt utilizes the <strong>DeepSeek R1</strong> reasoning model to power its prompt optimization and response generation.</p>
+        <p>AeroPrompt utilizes the <strong>OpenRouter API</strong> to provide high-performance AI reasoning and prompt optimization.</p>
         <ul>
-            <li><strong>Third-Party API Usage:</strong> Your prompts are transmitted via secure API to DeepSeek (Hangzhou DeepSeek Artificial Intelligence Co., Ltd.). This processing is necessary to provide the AI-generated content requested by the user.</li>
-            <li><strong>Data Usage Limitations:</strong> Based on our API integration, we request that your inputs are processed for immediate output generation. However, users should be aware that third-party providers may have their own data retention policies as outlined in the <a href="https://www.deepseek.com/privacy" target="_blank">DeepSeek Privacy Policy</a>.</li>
-            <li><strong>No Public Sharing:</strong> We do <strong>NOT</strong> share your data with public community feeds or standard public web interfaces. Your requests are sent specifically through private API channels.</li>
+            <li><strong>Unified API Gateway:</strong> Your requests are routed through OpenRouter, which acts as a secure 
+                conduit to various high-performance AI models.</li>
+            <li><strong>Privacy First (ZDR):</strong> We prioritize routing through providers that support <strong>Zero Data Retention (ZDR)</strong>. This means that, by default, neither AeroPrompt nor OpenRouter retains the content of your prompts or completions.</li>
+            <li><strong>No Model Training:</strong> Your data is used exclusively to generate a response for your current 
+                request. It is <strong>NOT</strong> used to train the underlying AI models provided through the OpenRouter gateway.</li>
         </ul>
 
         <h2>
@@ -251,11 +253,14 @@
             </svg>
             3. Data Security & Encryption
         </h2>
-        <p>We implement technical security measures designed to protect your information during transit and processing.</p>
+        <p>We implement strict security measures to protect your information during transit.</p>
         <ul>
-            <li><strong>Transit Encryption:</strong> All data transmitted between the extension, our intermediary servers, and the DeepSeek API is encrypted using industry-standard TLS/SSL (HTTPS) protocols.</li>
-            <li><strong>API Security:</strong> Our API keys are stored in secure, encrypted environments and are never exposed to the client-side of the browser extension.</li>
-            <li><strong>No Data Sale:</strong> We do not sell, trade, or rent your personal identification information or prompt history to third-party advertisers.</li>
+            <li><strong>End-to-End Encryption:</strong> All communications between the AeroPrompt extension, our 
+                servers, and the OpenRouter API are protected via industry-standard TLS/SSL (HTTPS) encryption.</li>
+            <li><strong>Metadata Anonymization:</strong> Any metadata processed for usage tracking or model ranking 
+                is stored anonymously and is never associated with your personal account ID.</li>
+            <li><strong>No Data Sale:</strong> We do not sell, trade, or rent your personal identification information 
+                or prompt data to third-party advertisers.</li>
         </ul>
 
         <h2>
@@ -266,9 +271,15 @@
             </svg>
             4. Contact Us
         </h2>
-        <p>If you have any questions or concerns about this Privacy Policy or our practices, please contact us:</p>
-        <p><strong>Email:</strong> <a href="mailto:try.abhishek01@gmail.com">try.abhishek01@gmail.com</a></p>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p><strong>Email:</strong> <a href="mailto:contact.abhishek017@gmail.com">contact.abhishek017@gmail.com</a></p>
 
+        <footer>
+            &copy; 2026 AeroPrompt. All rights reserved.
+        </footer>
+    </div>
+
+</body>
         <footer>
             &copy; 2026 AeroPrompt. All rights reserved.
         </footer>
