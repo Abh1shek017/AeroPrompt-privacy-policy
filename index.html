@@ -145,7 +145,6 @@
 
         .highlight-box {
             background: rgba(59, 130, 246, 0.05);
-            /* very subtle blue tint */
             border: 1px solid var(--border-color);
             border-left: 4px solid var(--accent-color);
             border-radius: 8px;
@@ -179,6 +178,24 @@
             border-top: 1px solid var(--border-color);
             padding-top: 20px;
         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        th {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -189,7 +206,7 @@
             <h1>Privacy Policy</h1>
             <div class="meta-info">
                 <strong>Application:</strong> AeroPrompt &bull;
-                <strong>Effective Date:</strong> January 14, 2026
+                <strong>Last Updated:</strong> February 7, 2026
             </div>
         </header>
 
@@ -197,36 +214,70 @@
             Privacy Policy outlines the types of information we collect and how we use, disclose, and safeguard your
             information when you use our browser extension and related services.</p>
 
+        <!-- SECTION 1: Information We Collect -->
         <h2>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path
-                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                </path>
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                 <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
                 <line x1="12" y1="22.08" x2="12" y2="12"></line>
             </svg>
-            1. Data Collection & Usage by Tier
+            1. Information We Collect
         </h2>
-        <p>We believe in data minimization. We only collect what is necessary to provide you with our services. Our data
-            handling practices differ based on your subscription tier:</p>
 
         <div class="highlight-box">
-            <h3>Guest Users</h3>
-            <p><strong>Zero Persistence Policy:</strong> For users who are not logged in or are on the Guest tier, we do
-                not store your chat history or input prompts on our servers. Your data is transiently processed via 
-                encrypted API calls to generate a response and is immediately discarded by AeroPrompt.</p>
+            <h3>Account Information (via Google Sign-In)</h3>
+            <p>When you sign in using Google, we collect the following information through the Chrome Identity API:</p>
+            <ul>
+                <li><strong>Email Address:</strong> Used to identify your account and manage your subscription</li>
+                <li><strong>Display Name:</strong> Used for personalization within the extension</li>
+                <li><strong>Profile Picture URL:</strong> Used to display your avatar in the extension</li>
+            </ul>
+            <p>We only request access to basic profile information (<code>openid</code>, <code>email</code>, <code>profile</code> scopes). We do <strong>NOT</strong> have access to your Google Drive, Gmail, contacts, or any other Google services.</p>
+        </div>
+
+        <h3>Usage Data by Tier</h3>
+
+        <div class="highlight-box">
+            <h3>Guest Users (Not Signed In)</h3>
+            <p><strong>Zero Persistence Policy:</strong> For users who are not logged in, we do not store your chat history or input prompts on our servers. Your data is transiently processed via encrypted API calls to generate a response and is immediately discarded by AeroPrompt.</p>
         </div>
 
         <div class="highlight-box">
-            <h3>Free & Pro Users</h3>
-            <p><strong>Contextual Continuity:</strong> To enable features like "Context Awareness," we securely store a 
-                limited history (approximately the last 5-10 interactions) of your conversations. This allows AeroPrompt 
-                to maintain context during your session.</p>
-            <p><strong>Control & Deletion:</strong> You retain full control over this data. You may clear your
-                conversation history at any time directly through the extension's settings menu.</p>
+            <h3>Free & Pro Users (Signed In)</h3>
+            <ul>
+                <li><strong>Contextual Continuity:</strong> We securely store a limited history (last 5-10 interactions) to enable context-aware prompt optimization</li>
+                <li><strong>Subscription Status:</strong> We store your subscription tier and payment status</li>
+                <li><strong>Usage Statistics:</strong> Anonymous usage metrics to improve our service</li>
+            </ul>
+            <p><strong>Control & Deletion:</strong> You retain full control over this data. You may clear your conversation history at any time directly through the extension's settings menu.</p>
         </div>
 
+        <!-- SECTION 2: How We Use Your Information -->
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            2. How We Use Your Information
+        </h2>
+        <p>We use the collected information to:</p>
+        <ul>
+            <li><strong>Authenticate:</strong> Verify your identity and manage your account</li>
+            <li><strong>Provide Services:</strong> Optimize prompts and deliver personalized features</li>
+            <li><strong>Process Payments:</strong> Manage Pro subscriptions via Razorpay</li>
+            <li><strong>Customer Support:</strong> Respond to your inquiries and requests</li>
+            <li><strong>Improve Services:</strong> Analyze anonymous usage patterns to enhance features</li>
+        </ul>
+        <p>We do <strong>NOT</strong> use your data to:</p>
+        <ul>
+            <li>Train AI models</li>
+            <li>Sell to third parties</li>
+            <li>Target advertisements</li>
+        </ul>
+
+        <!-- SECTION 3: Third-Party Services -->
         <h2>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -234,52 +285,148 @@
                 <line x1="12" y1="16" x2="12" y2="12"></line>
                 <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
-            2. AI Infrastructure & Third-Party Routing
+            3. Third-Party Services
         </h2>
-        <p>AeroPrompt utilizes the <strong>OpenRouter API</strong> to provide high-performance AI reasoning and prompt optimization.</p>
+
+        <h3>OpenRouter API</h3>
         <ul>
-            <li><strong>Unified API Gateway:</strong> Your requests are routed through OpenRouter, which acts as a secure 
-                conduit to various high-performance AI models.</li>
-            <li><strong>Privacy First (ZDR):</strong> We prioritize routing through providers that support <strong>Zero Data Retention (ZDR)</strong>. This means that, by default, neither AeroPrompt nor OpenRouter retains the content of your prompts or completions.</li>
-            <li><strong>No Model Training:</strong> Your data is used exclusively to generate a response for your current 
-                request. It is <strong>NOT</strong> used to train the underlying AI models provided through the OpenRouter gateway.</li>
+            <li>Your prompts are routed through OpenRouter for AI processing</li>
+            <li>We prioritize providers with <strong>Zero Data Retention (ZDR)</strong> policies</li>
+            <li>Your prompts are <strong>NOT</strong> used to train AI models</li>
         </ul>
 
+        <h3>Google Authentication</h3>
+        <ul>
+            <li>We use Google Sign-In via the Chrome Identity API</li>
+            <li>Google's privacy policy applies: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+        </ul>
+
+        <h3>Razorpay (Payment Processing)</h3>
+        <ul>
+            <li>Pro subscriptions are processed via Razorpay</li>
+            <li>We do <strong>NOT</strong> store your payment card details</li>
+            <li>Razorpay's privacy policy: <a href="https://razorpay.com/privacy/" target="_blank">https://razorpay.com/privacy/</a></li>
+        </ul>
+
+        <!-- SECTION 4: Data Security -->
         <h2>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
-            3. Data Security & Encryption
+            4. Data Security & Encryption
         </h2>
-        <p>We implement strict security measures to protect your information during transit.</p>
+        <p>We implement strict security measures to protect your information:</p>
         <ul>
-            <li><strong>End-to-End Encryption:</strong> All communications between the AeroPrompt extension, our 
-                servers, and the OpenRouter API are protected via industry-standard TLS/SSL (HTTPS) encryption.</li>
-            <li><strong>Metadata Anonymization:</strong> Any metadata processed for usage tracking or model ranking 
-                is stored anonymously and is never associated with your personal account ID.</li>
-            <li><strong>No Data Sale:</strong> We do not sell, trade, or rent your personal identification information 
-                or prompt data to third-party advertisers.</li>
+            <li><strong>TLS/SSL Encryption:</strong> All communications are protected via industry-standard HTTPS</li>
+            <li><strong>Secure Storage:</strong> User data is stored securely with encryption at rest</li>
+            <li><strong>Metadata Anonymization:</strong> Usage analytics are anonymized and never linked to personal accounts</li>
+            <li><strong>No Data Sale:</strong> We never sell, trade, or rent your personal information</li>
         </ul>
 
+        <!-- SECTION 5: Your Rights -->
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <polyline points="17 11 19 13 23 9"></polyline>
+            </svg>
+            5. Your Rights & Controls
+        </h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li><strong>Access:</strong> View the data we have collected about you</li>
+            <li><strong>Delete:</strong> Clear your conversation history at any time through the extension settings</li>
+            <li><strong>Account Deletion:</strong> Request complete deletion of your account by contacting us</li>
+            <li><strong>Opt-Out:</strong> Use the extension as a Guest without signing in</li>
+        </ul>
+
+        <!-- SECTION 6: Data Retention -->
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            6. Data Retention
+        </h2>
+        <ul>
+            <li><strong>Account Data:</strong> Retained while your account is active</li>
+            <li><strong>Conversation History:</strong> Retained until you clear it or delete your account</li>
+            <li><strong>Anonymous Analytics:</strong> Retained indefinitely in aggregated, non-identifiable form</li>
+        </ul>
+        <p>Upon account deletion, all personal data is permanently removed within 30 days.</p>
+
+        <!-- SECTION 7: Children's Privacy -->
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            7. Children's Privacy
+        </h2>
+        <p>AeroPrompt is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.</p>
+
+        <!-- SECTION 8: Chrome Extension Permissions -->
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            8. Chrome Extension Permissions
+        </h2>
+        <p>This extension uses the following permissions:</p>
+        <table>
+            <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><code>storage</code></td>
+                <td>Save your preferences, settings, and history locally on your device</td>
+            </tr>
+            <tr>
+                <td><code>identity</code></td>
+                <td>Enable Google Sign-In for secure account authentication and subscription management</td>
+            </tr>
+            <tr>
+                <td><code>host_permissions</code></td>
+                <td>Inject the prompt optimizer on supported AI platforms (ChatGPT, Claude, Gemini)</td>
+            </tr>
+        </table>
+        <p>All permissions are used solely for the stated purposes and are essential for the extension's core functionality.</p>
+
+        <!-- SECTION 9: Policy Changes -->
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            9. Changes to This Policy
+        </h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this page. Continued use of the extension after changes constitutes acceptance of the revised policy.</p>
+
+        <!-- SECTION 10: Contact -->
         <h2>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            4. Contact Us
+            10. Contact Us
         </h2>
         <p>If you have any questions about this Privacy Policy, please contact us:</p>
         <p><strong>Email:</strong> <a href="mailto:contact.abhishek017@gmail.com">contact.abhishek017@gmail.com</a></p>
 
-        <footer>
-            &copy; 2026 AeroPrompt. All rights reserved.
-        </footer>
-    </div>
-
-</body>
         <footer>
             &copy; 2026 AeroPrompt. All rights reserved.
         </footer>
